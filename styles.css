@@ -154,6 +154,12 @@ nav {
 
 header {
     background-color: white;
+    display: grid;
+    grid-template-areas: "search alerts"
+        "user-info buttons";
+    align-items: center;
+    padding: 20px 50px;
+    row-gap: 20px;
 }
 
 main {
@@ -202,4 +208,121 @@ li img {
 
 .dashboard img {
     padding-right: 10px;
+}
+
+.alerts,
+.buttons {
+    justify-self: end;
+}
+
+input,
+.user-info {
+    justify-self: start;
+}
+
+.alerts,
+.user-info,
+.search {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+.name p:first-of-type {
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 0 0 3px 20px;
+}
+
+.name p:last-of-type {
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0 0 3px 20px;
+}
+
+.alerts p {
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 20px 3px 20px;
+}
+
+.user-info img {
+    height: 70px;
+}
+
+.alerts img:last-of-type {
+    height: 30px;
+}
+
+.alerts img:first-of-type {
+    height: 26px;
+    padding: 0 20px 0 0;
+    transition: all .2s ease-in-out;
+}
+
+.btn2 {
+    background-color: darkcyan;
+    border-radius: 40px;
+    border: 0 solid transparent;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 0 0 10px;
+    width: 100px;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+}
+
+.btn2:active {
+    opacity: 0.8;
+}
+
+.btn2:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.alerts img:first-of-type:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.alerts img:first-of-type:active {
+    opacity: 0.7;
+}
+
+.search-button {
+    border: none;
+    background-color: transparent;
+}
+
+input {
+    border: none;
+    background-color: rgb(229, 229, 229);
+    border-radius: 40px;
+    height: 25px;
+    width: 400px;
+    padding: 0 0 0 10px;
+    font-family: 'roboto';
+    margin: 0 0 0 10px;
+}
+
+input:focus {
+    outline: darkcyan solid 2px;
+}
+
+.search-icon {
+    height: 15px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.search-button:active {
+    opacity: 0.7;
 }
